@@ -1,0 +1,182 @@
+.what-inside
+	background-color: $color-main-bg
+	padding: 120px 0
+.what-inside__h2
+	line-height: 100%
+	margin-bottom: 16px
+.what-inside__lists
+	list-style-type: none
+	margin: 0
+	margin-bottom: 38px
+	padding: 0
+.what-inside__list
+	display: flex
+	align-items: center
+	margin-bottom: 16px
+	span
+		font-weight: bold
+		font-size: 16px
+		line-height: 140%
+		color: $color-dark-grey
+	.icon-list-style
+		color: $color-button
+		margin-right: 8px
+		font-size: 8px
+.what-inside__desc
+	display: flex
+	margin-top: 24px
+	small
+		font-size: 12px
+		line-height: 140%
+		color: $color-dark-grey
+		max-width: 280px
+.what-inside__alert
+	display: block
+	background: #FF0000
+	color: #fff
+	width: 16px
+	height: 16px
+	border-radius: 100%
+	font-weight: bold
+	font-size: 14px
+	line-height: 17px
+	text-align: center
+	padding: 0 6px
+	margin-right: 8px
+.what-inside__image-block
+	text-align: center
+.what-inside__bubble-image
+	position: relative
+	display: inline-block
+.bubble-image__bubble-block
+	position: absolute
+.bubble-image__bubble
+	max-width: none
+.bubble-image__text
+	font-weight: bold
+	font-size: 16px
+	line-height: 100%
+	width: 100%
+	text-align: center
+	top: 50%
+	transform: translateY(-50%)
+	text-transform: capitalize
+	color: $color-button
+	position: absolute
+	padding: 0 5px
+.bubble-image__bubble-after
+	position: absolute
+
+.bubble-image__bubble_top-left
+	bottom: 100%
+	left: 0
+	.bubble-image__bubble-after
+		left: calc(100% + 5px)
+		top: 50%
+		transform: translateY(-50%)
+.bubble-image__bubble_top-right
+	bottom: calc(100% + 16px)
+	right: -44px
+	.bubble-image__bubble-after
+		left: 20px
+		top: 100%
+.bubble-image__bubble_bottom-left
+	right: calc(100% - 22px)
+	bottom: -8px
+	.bubble-image__bubble-after
+		right: 0
+		bottom: calc(100% + 4px)
+.bubble-image__bubble_bottom
+	left: 22px
+	top: calc(100% + 25px)
+	.bubble-image__bubble-after
+		top: -17px
+		right: -17px
+.bubble-image__bubble_bottom-right
+	right: -44px
+	top: calc(100% + 20px)
+	.bubble-image__bubble-after
+		left: -16px
+		top: -12px
+
+@media (max-width: 991px)
+	.what-inside
+		text-align: center
+		padding: 80px 0
+	.what-inside__h2
+		display: none
+	.what-inside__lists
+		margin-bottom: 24px
+	.what-inside__list
+		display: inline-flex
+		width: 49%
+		text-align: left
+		align-items: flex-start
+		.icon-list-style
+			line-height: 22.4px
+	.what-inside__desc
+		width: 304px
+		margin: 24px auto 0
+		text-align: left
+	.what-inside__image-block
+		padding-top: 162px
+		padding-bottom: 172px
+
+@media (max-width: 767px)
+	.what-inside
+		padding: 40px 0
+	.what-inside__image-block
+		padding-top: 0
+		padding-bottom: 16px
+	.what-inside__bubble-image
+		padding-top: 280px
+	.what-inside__bubble-image:before
+		content: ''
+		display: block
+		background-color: #fff
+		width: 126px
+		height: 126px
+		border-radius: 100%
+		position: absolute
+		top: 80px
+		left: 45%
+		transform: translateX(-50%)
+	.bubble-image__bubble-after
+		display: none
+
+	.bubble-image__bubble_top-left
+		bottom: auto
+		top: 32px
+		left: calc(45% - 41px)
+		transform: translateX(-50%)
+
+	.bubble-image__bubble_top-right
+		bottom: auto
+		top: 0
+		right: auto
+		left: calc(45% + 69px)
+		transform: translateX(-50%)
+
+	.bubble-image__bubble_bottom-left
+		right: auto
+		left: calc(45% - 59px)
+		transform: translateX(-50%)
+		bottom: auto
+		top: 103px
+
+	.bubble-image__bubble_bottom
+		left: 45%
+		transform: translateX(-50%)
+		top: 171px
+
+	.bubble-image__bubble_bottom-right
+		right: auto
+		left: calc(45% + 90px)
+		transform: translateX(-50%)
+		top: 108px
+	.what-inside__lists
+		max-width: 320px
+		margin-left: auto
+		margin-right: auto
+	.what-inside__list
+		width: 100%

@@ -1,0 +1,63 @@
+.check-out
+	padding: 80px 0
+	text-align: center
+	&__checklist
+		margin-top: 40px
+		margin-bottom: 0
+		padding: 0
+	&__checktext
+		text-align: right
+		font-weight: bold
+		margin-top: 40px
+	&__total-price
+		font-weight: bold
+		font-size: 24px
+		line-height: 140%
+		text-align: right
+		color: $color-button
+		margin-bottom: 40px
+		*
+			color: $color-button
+	&__btn
+		min-width: 0
+		width: 100%
+		vertical-align: middle
+	&__button-text
+		vertical-align: middle
+		color: #fff
+		text-transform: none
+	&__button-icon
+		display: inline-block
+		font-size: 25px
+		margin-left: 12px
+		color: #fff
+		vertical-align: middle
+.checkline
+	display: flex
+	align-items: center
+	padding: 16px 24px
+	text-align: left
+	&:nth-of-type(odd)
+		background-color: $color-light
+	&__name
+		line-height: 16px
+	&__price
+		font-weight: bold
+		font-size: 24px
+		line-height: 30px
+		margin-left: auto
+
+
+@media (max-width: 991px)
+	.check-out
+		&__checktext
+			text-align: center
+		&__total-price
+			text-align: center
+
+
+@media (max-width: 767px)
+	.check-out
+		padding: 40px 0
+		&__btn
+			width: 200px

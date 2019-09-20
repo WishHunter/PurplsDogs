@@ -1,0 +1,28 @@
+.shipping-details
+	background-color: $color-main-bg
+	padding: 80px 0
+	text-align: center
+	label
+		width: 100%
+	&__label
+		text-align: left
+		margin-bottom: 8px
+		line-height: 24px
+		font-weight: bold
+		margin-top: 24px
+	&__required 
+		color: #FF0000
+	&__input
+		width: 100%
+		border-radius: 2px
+		padding: 12px 24px
+		line-height: 1
+		border: 1px solid transparent
+		&:focus
+			border-color: $color-button
+			color: $color-button
+			outline: none
+
+@media (max-width: 767px)
+	.shipping-details
+		padding: 40px 0

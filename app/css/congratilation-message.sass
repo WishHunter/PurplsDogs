@@ -1,0 +1,32 @@
+.congratilation-message
+	position: absolute
+	left: 0
+	top: 0
+	width: 100%
+	min-height: 100vh
+	background-color: #fff
+	background-image: url('../img/congratilation-message__bg.png')
+	background-repeat: no-repeat
+	background-size: cover
+	background-position: center center
+	display: flex
+	align-items: center
+	text-align: center
+	&__logo
+		margin-bottom: 40px
+	&__text
+		font-size: 24px
+		line-height: 140%
+		margin-top: 24px
+
+@media (max-width: 991px)
+	.congratilation-message
+		background-size: auto 80%
+@media (max-width: 767px)
+	.congratilation-message
+		background-size: 200% auto
+		background-position: center calc(100% - 76px)
+		&__text
+			font-size: 16px
+			line-height: 140%
+			margin-top: 16px
