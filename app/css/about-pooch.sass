@@ -32,6 +32,8 @@
 			width: 50%
 	&__radiobutton
 		display: none
+	&__radiobutton.input-alert + .radiobutton-block
+		border-color: #FF0000
 	&__radiobutton:checked + .radiobutton-block
 		border-color: $color-button
 		*

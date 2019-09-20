@@ -4,7 +4,7 @@ var order_user = {
 		price: '',
 	},
 	poochInfo: {
-		name: '',
+		name: 'dog',
 		size: '',
 		boxType: 'false',
 		extraToy: 'false'
@@ -36,6 +36,7 @@ $(document).ready(function() {
 		showMaskOnFocus: false,
 		oncomplete: function() {
 		  order_user.userInfo.name = $('.shipping-details__input-name').val();
+		  $('.shipping-details__input-name').removeClass('input-alert');
 		  order_user_output()
 		},
 		onincomplete: function() {
@@ -55,6 +56,7 @@ $(document).ready(function() {
 		showMaskOnFocus: false,
 		oncomplete: function() {
 		  order_user.userInfo.email = $('.shipping-details__input-email').val();
+		  $('.shipping-details__input-email').removeClass('input-alert');
 		  order_user_output()
 		},
 		onincomplete: function() {
@@ -67,6 +69,7 @@ $(document).ready(function() {
 		showMaskOnFocus: false,
 		oncomplete: function() {
 		  order_user.userInfo.city = $('.shipping-details__input-city').val();
+		  $('.shipping-details__input-city').removeClass('input-alert');
 		  order_user_output()
 		},
 		onincomplete: function() {
@@ -85,6 +88,7 @@ $(document).ready(function() {
 		showMaskOnFocus: false,
 		oncomplete: function() {
 		  order_user.userInfo.zip = $('.shipping-details__input-zip').val();
+		  $('.shipping-details__input-zip').removeClass('input-alert');
 		  order_user_output()
 		},
 		onincomplete: function() {
@@ -96,7 +100,20 @@ $(document).ready(function() {
 	$('.next-page').on('click', function(e) {
 		e.preventDefault();
 		if ($(this).hasClass("next-page__disabled")) {
-			return;
+			for (var key in order_user.poochInfo) {
+				if (order_user.poochInfo[key] == '' || order_user.poochInfo[key] == 'dog') {
+					$('[name = poochInfo__' + key + ']').addClass('input-alert');
+					$('body,html').animate({scrollTop: ($('.input-alert').parent().offset().top - 150)}, 1500);
+					return;
+				};
+			};
+			for (var key in order_user.userInfo) {
+				if (order_user.userInfo[key] == '') {
+					$('[name = userInfo__' + key + ']').addClass('input-alert');
+					$('body,html').animate({scrollTop: ($('.input-alert').parent().offset().top - 150)}, 1500);
+					return;
+				};
+			}
 		}
 		$(this).parents('.page').hide();
 		$($(this).attr('href')).fadeIn();
@@ -110,27 +127,15 @@ $(document).ready(function() {
 		subscription_active();
 	});
 
-	$('input').on('change', function(e) {
+	$('input, select').on('change', function(e) {
 		if ($(this).hasClass('custom_validation')) {
 			return;		
 		};
 		var name_input = $(this).attr('name');
 		order_user[name_input.split('__')[0]][name_input.split('__')[1]] = $(this).val();
+		$(this).removeClass('input-alert');
 		order_user_output();
 	});
-	$('select').on('change', function(e) {
-		var name_input = $(this).attr('name');
-		order_user[name_input.split('__')[0]][name_input.split('__')[1]] = $(this).val();
-		order_user_output();
-	});
-
-	document.querySelector('.check-out__checklist').addEventListener('click', function(event) {
-		if (!event.target.classList.contains('checkline__delete')) {
-			return;
-		};
-	})
-
-
 
 
 
@@ -168,7 +173,6 @@ $(document).ready(function() {
 			$('.check-out__btn').addClass('next-page__disabled');
 			return;
 		}
-		console.log(order_user);
 		$('.check-out__btn').removeClass('next-page__disabled');
 	};
 
@@ -178,7 +182,6 @@ $(document).ready(function() {
 
 
 	$.getScript("js/USA_states.js", function(){
-		console.log("Загружено.");
 		states_select_add($('.shipping-details__input-state'), states);
 	});
 

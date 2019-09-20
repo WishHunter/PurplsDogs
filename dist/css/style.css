@@ -3627,12 +3627,6 @@ img {
     color: #fff;
     text-decoration: none; }
 
-.next-page__disabled {
-  opacity: .6;
-  cursor: not-allowed; }
-  .next-page__disabled:hover {
-    background-color: #007CC2; }
-
 .wap {
   display: none; }
 
@@ -3954,7 +3948,8 @@ img {
   line-height: 140%;
   text-align: left;
   color: #828282;
-  margin-bottom: 16px; }
+  margin-bottom: 16px;
+  max-width: 100%; }
   .review__text span {
     color: #333333;
     font-weight: bold;
@@ -4075,7 +4070,11 @@ img {
   .subscription-plan {
     padding: 40px 0; }
   .subscription-option {
-    padding: 16px 8px; } }
+    padding: 16px 8px; }
+    .subscription-option__opinion {
+      margin-top: 0; }
+    .subscription-option__price {
+      margin-top: auto; } }
 
 .about-pooch {
   padding: 80px 0;
@@ -4122,6 +4121,8 @@ img {
       width: 50%; }
   .about-pooch__radiobutton {
     display: none; }
+  .about-pooch__radiobutton.input-alert + .radiobutton-block {
+    border-color: #FF0000; }
   .about-pooch__radiobutton:checked + .radiobutton-block {
     border-color: #007CC2; }
     .about-pooch__radiobutton:checked + .radiobutton-block * {
@@ -4416,12 +4417,17 @@ body {
 .footer__desc {
   color: #828282; }
 
+.input-alert {
+  border-color: #FF0000; }
+
 @media (max-width: 991px) {
   .wap {
     display: block; } }
 
 @media (max-width: 767px) {
   h2, h3 {
-    font-size: 24px; }
+    font-size: 24px;
+    margin-bottom: 10px;
+    line-height: 1; }
   h3 {
     font-size: 16px; } }
