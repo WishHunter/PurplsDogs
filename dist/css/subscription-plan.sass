@@ -1,0 +1,90 @@
+.subscription-plan
+	background-color: $color-main-bg
+	padding: 80px 0
+	text-align: center
+	&__desc
+		span 
+			color: #FF0000
+
+.subscription-option
+	background: #FFF
+	border-radius: 2px
+	padding: 16px 40px
+	margin: 40px 0
+	display: flex
+	flex-direction: column
+	transition: all .3s
+	&:hover, &_active
+		text-decoration: none
+		background-color: $color-button
+		.subscription-option__name, .subscription-option__opinion, .subscription-option__price, .subscription-option__desc
+			color: $color-light
+			span 
+				color: $color-light
+		.subscription-option__btn
+			background-color: $color-light
+		.subscription-option__btn-text, .subscription-option__btn-text-active
+			color: $color-button
+	&__name
+		font-size: 14px
+		line-height: 17px
+		color: $color-dark-grey
+		margin-bottom: 8px
+	&__opinion
+		font-size: 16px
+		line-height: 140%
+		font-weight: bold
+		margin-top: auto
+	&__price
+		font-weight: bold
+		font-size: 24px
+		line-height: 140%
+		color: $color-button
+	&__btn
+		@extend .btn
+		min-width: 0
+		width: 100%
+		margin: 8px 0
+		text-transform: none
+		position: relative
+	&__btn-text
+		color: #fff
+		opacity: 1
+	&__btn-text-active
+		color: #fff
+		position: absolute
+		left: 50%
+		top: 50%
+		transform: translate(-50%, -50%)
+		opacity: 0
+		transition: all .1s
+	&__desc
+		font-size: 12px
+		line-height: 15px
+		color: $color-dark-grey
+		span 
+			color: #FF0000
+	&_active
+		.subscription-option
+			&__btn-text
+				opacity: 0
+				transition: all .1s
+			&__btn-text-active
+				opacity: 1
+		
+
+@media (max-width: 991px)
+	.subscription-option
+		align-items: center
+		&__btn
+			width: 112px
+
+@media (max-width: 767px)
+	.subscription-plan
+		padding: 40px 0
+	.subscription-option
+		padding: 16px 8px
+		&__opinion
+			margin-top: 0
+		&__price
+			margin-top: auto

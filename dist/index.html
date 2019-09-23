@@ -14,7 +14,7 @@
 		<a href=".main_page" class="next-page"><img src="img/logo.svg" alt="" class="logo"></a>
 	</header>
 
-	<div class="page main_page">
+	<div class="page main-page">
 		<section class="hero">
 			<div class="container">
 				<div class="row justify-content-center align-items-center">
@@ -22,7 +22,7 @@
 						<h2>Who is a good dog?</h2>
 						<h3>Your dog is the best dog!</h3>
 						<p>Show your love and care every month with a set of tasty treats and fun toys.</p>
-						<a href=".order_page" class="btn hero__button next-page">Order Purpls</a>
+						<a href=".order-page" class="btn hero__button next-page">Order Purpls</a>
 					</div>
 					<div class="col-md-5 col-lg-4">
 						<img src="img/hero.png" alt="" class="hero__img">
@@ -58,7 +58,7 @@
 					</div>
 				</div>
 				<p class="how-works__desc">Doggie fun! Delivered!</p>
-				<a href=".order_page" class="btn next-page">Subscribe</a>
+				<a href=".order-page" class="btn next-page">Subscribe</a>
 			</div>
 		</section>
 
@@ -74,7 +74,7 @@
 							<li class="what-inside__list"><span class="icon-list-style"></span><span>One Rope & Tug Toy</span></li>
 							<li class="what-inside__list"><span class="icon-list-style"></span><span>One Chew Toy or Training Treats</span></li>
 						</ul>
-						<a href=".order_page" class="btn next-page">Order Purpls</a>
+						<a href=".order-page" class="btn next-page">Order Purpls</a>
 						<div class="what-inside__desc">
 							<span class="what-inside__alert">!</span>
 							<small>All toys are selected specially for your dog, taking into account his or her size. <br> Box content depends on the chosen box type - Toys only or Toys & Treats</small>
@@ -131,12 +131,12 @@
 						<img src="img/inst-3.jpg" alt="" class="review__img">
 					</div>
 				</div>
-				<a href=".order_page" class="btn reviews__button next-page">Subscribe</a>
+				<a href=".order-page" class="btn reviews__button next-page">Subscribe</a>
 			</div>
 		</section>
 	</div>
 
-	<div class="page order_page">
+	<div class="page order-page">
 		<div class="subscription-plan">
 			<div class="container">
 				<h2>Choose your subscription plan</h2>
@@ -197,7 +197,7 @@
 					<div class="col-md-8 col-lg-4">					
 						<div class="about-pooch__form-block">
 							<p class="about-pooch__label">What is your dog’s name? <span class="about-pooch__required">*</span></p>
-							<input type="text" name="poochInfo__name" class="about-pooch__input" placeholder="Dog’s name">
+							<input type="text" form="order-page__form" name="poochInfo__name" class="about-pooch__input" placeholder="Dog’s name">
 						</div>
 
 						<div class="about-pooch__form-block">
@@ -205,7 +205,7 @@
 							<div class="about-pooch__three-radiobutton">
 
 								<label class="about-pooch__custom-radiobutton">
-									<input class="about-pooch__radiobutton" type="radio" name="poochInfo__size" value="miniature">
+									<input form="order-page__form" class="about-pooch__radiobutton" type="radio" name="poochInfo__size" value="miniature">
 									<div class="about-pooch__radiobutton-block radiobutton-block">
 										<span class="icon-hous-dog radiobutton-block__img"></span>
 										<p class="radiobutton-block__header">Miniature</p>
@@ -214,7 +214,7 @@
 								</label>
 
 								<label class="about-pooch__custom-radiobutton">
-									<input class="about-pooch__radiobutton" type="radio" name="poochInfo__size" value="medium">
+									<input form="order-page__form" class="about-pooch__radiobutton" type="radio" name="poochInfo__size" value="medium">
 									<div class="about-pooch__radiobutton-block radiobutton-block">
 										<span class="icon-hous-dog radiobutton-block__img radiobutton-block__img-medium"></span>
 										<p class="radiobutton-block__header">Medium</p>
@@ -223,7 +223,7 @@
 								</label>
 
 								<label class="about-pooch__custom-radiobutton">
-									<input class="about-pooch__radiobutton" type="radio" name="poochInfo__size" value="large">
+									<input form="order-page__form" class="about-pooch__radiobutton" type="radio" name="poochInfo__size" value="large">
 									<div class="about-pooch__radiobutton-block radiobutton-block">
 										<span class="icon-hous-dog radiobutton-block__img radiobutton-block__img-large"></span>
 										<p class="radiobutton-block__header">Large</p>
@@ -239,12 +239,12 @@
 							<div class="about-pooch__two-radiobutton">
 
 								<label class="about-pooch__custom-radiobutton">
-									<input class="about-pooch__radiobutton" type="radio" name="poochInfo__boxType" value="true">
+									<input form="order-page__form" class="about-pooch__radiobutton" type="radio" name="poochInfo__boxType" value="true">
 									<p class="about-pooch__radiobutton-text">Toys & Treats</p>
 								</label>
 
 								<label class="about-pooch__custom-radiobutton">
-									<input class="about-pooch__radiobutton" type="radio" name="poochInfo__boxType" checked value="false">
+									<input form="order-page__form" class="about-pooch__radiobutton" type="radio" name="poochInfo__boxType" checked value="false">
 									<p class="about-pooch__radiobutton-text">Only toys</p>
 								</label>
 
@@ -256,12 +256,12 @@
 							<div class="about-pooch__two-radiobutton">
 
 								<label class="about-pooch__custom-radiobutton">
-									<input class="about-pooch__radiobutton" type="radio" name="poochInfo__extraToy" value="true">
+									<input form="order-page__form" class="about-pooch__radiobutton" type="radio" name="poochInfo__extraToy" value="true">
 									<p class="about-pooch__radiobutton-text">Yes, sure!</p>
 								</label>
 
 								<label class="about-pooch__custom-radiobutton">
-									<input class="about-pooch__radiobutton" type="radio" name="poochInfo__extraToy" checked value="false">
+									<input form="order-page__form" class="about-pooch__radiobutton" type="radio" name="poochInfo__extraToy" checked value="false">
 									<p class="about-pooch__radiobutton-text">No, thanks</p>
 								</label>
 
@@ -281,25 +281,25 @@
 							<div class="col-md-5">
 								<label>
 									<p class="shipping-details__label">Full name <span class="shipping-details__required">*</span></p>
-									<input type="text" name="userInfo__name" class="shipping-details__input shipping-details__input-name custom_validation" placeholder="Your full name">
+									<input form="order-page__form" type="text" name="userInfo__name" class="shipping-details__input shipping-details__input-name custom_validation" placeholder="Your full name">
 								</label>
 							</div>
 							<div class="col-md-5">
 								<label>
 									<p class="shipping-details__label">E-mail <span class="shipping-details__required">*</span></p>
-									<input type="text" name="userInfo__email" class="shipping-details__input shipping-details__input-email custom_validation" placeholder="Your email">
+									<input form="order-page__form" type="text" name="userInfo__email" class="shipping-details__input shipping-details__input-email custom_validation" placeholder="Your email">
 								</label>
 							</div>
 							<div class="col-md-10">
 								<label>
 									<p class="shipping-details__label">Street <span class="shipping-details__required">*</span></p>
-									<input type="text" name="userInfo__street" class="shipping-details__input shipping-details__input-street" placeholder="Your street address">
+									<input form="order-page__form" type="text" name="userInfo__street" class="shipping-details__input shipping-details__input-street" placeholder="Your street address">
 								</label>
 							</div>
 							<div class="col-md-5">
 								<label>
 									<p class="shipping-details__label">City <span class="shipping-details__required">*</span></p>
-									<input type="text" name="userInfo__city" class="shipping-details__input shipping-details__input-city custom_validation" placeholder="Your city">
+									<input form="order-page__form" type="text" name="userInfo__city" class="shipping-details__input shipping-details__input-city custom_validation" placeholder="Your city">
 								</label>
 							</div>
 							<div class="col-md-5">
@@ -307,13 +307,18 @@
 									<div class="col-5">
 										<label>
 											<p class="shipping-details__label">State <span class="shipping-details__required">*</span></p>
-											<select name="userInfo__state" class="shipping-details__input shipping-details__input-state"><option hidden></option></select>
+											<div class="shipping-details__dropdawn dropdawn">
+												<input form="order-page__form" type="text" name="userInfo__state" class="shipping-details__input shipping-details__input-state custom_validation dropdawn__input">
+												<ul class="dropdawn__lists">
+													<!-- <li class="dropdawn__list"></li> -->
+												</ul>
+											</div>
 										</label>
 									</div>
 									<div class="col-5">
 										<label>
 											<p class="shipping-details__label">Zip <span class="shipping-details__required">*</span></p>
-											<input type="tel" name="userInfo__zip" class="shipping-details__input shipping-details__input-zip custom_validation" placeholder="Your zip">
+											<input form="order-page__form" type="tel" name="userInfo__zip" class="shipping-details__input shipping-details__input-zip custom_validation" placeholder="Your zip">
 										</label>
 									</div>
 								</div>
@@ -338,14 +343,17 @@
 							<p class="checktext__address-over">Minneapolis, MN 28752</p>
 						</div>
 						<p class="check-out__total-price">Total USD: <span class="js__total-price">$31,98</span></p>
-						<a href=".success_page" class="btn check-out__btn next-page"><span class="check-out__button-text">Pay with card</span> <span class="icon-card check-out__button-icon"></span></a>
+						<form action="" method="post" id="order-page__form">
+							<input type="text" name="subscription__name" hidden value="6 months">
+							<a href=".success-page" class="btn check-out__btn"><span class="check-out__button-text">Pay with card</span> <span class="icon-card check-out__button-icon"></span></a>
+						</form>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
 
-	<div class="page success_page">
+	<div class="page success-page">
 
 		<div class="congratilation-message">
 			<div class="container">
